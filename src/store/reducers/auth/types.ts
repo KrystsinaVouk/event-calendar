@@ -1,4 +1,4 @@
-import {IUser} from "../../../models/IUser";
+import { IUser } from "../../../models/IUser";
 
 export interface AuthState {
     isAuth: boolean;
@@ -35,7 +35,7 @@ export interface SetIsLoadingAction {
 }
 
 export type AuthAction =
-    SetAuthAction |
-    SetUserAction |
-    SetErrorAction |
-    SetIsLoadingAction
+    | SetAuthAction
+    | SetUserAction
+    | SetErrorAction
+    | SetIsLoadingAction;

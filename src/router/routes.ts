@@ -5,18 +5,18 @@ import EventPage from "../pages/EventPage";
 export interface IRoute {
     path: string;
     exact?: boolean;
-    element: React.ComponentType
+    element: React.ComponentType;
 }
 
 export enum RoutesNames {
     LOGIN = `/login`,
-    EVENT = `/`
+    EVENT = `/`,
 }
 
 export const publicRoutes: IRoute[] = [
-    {path: RoutesNames.LOGIN, exact: true, element: LoginPage}
-]
+    { path: RoutesNames.LOGIN, exact: true, element: LoginPage },
+];
 
 export const privateRoutes: IRoute[] = [
-    {path: RoutesNames.EVENT, exact: true, element: EventPage}
-]
+    { path: RoutesNames.EVENT, exact: true, element: EventPage },
+];

@@ -7,23 +7,25 @@ import { useActions } from "./hooks/useActions";
 import { IUser } from "./models/IUser";
 
 const App: FC = () => {
-  const { setUser, setIsAuth } = useActions();
+    const { setUser, setIsAuth } = useActions();
 
-  useEffect(() => {
-    if (localStorage.getItem("auth")) {
-      setUser({ username: localStorage.getItem("username" || "") } as IUser);
-      setIsAuth(true);
-    }
-  }, []);
+    useEffect(() => {
+        if (localStorage.getItem("auth")) {
+            setUser({
+                username: localStorage.getItem("username" || ""),
+            } as IUser);
+            setIsAuth(true);
+        }
+    }, []);
 
-  return (
-    <Layout style={{ justifyContent: "center", alignItems: "center" }}>
-      <NavBar />
-      <Layout.Content style={{ width: 700 }}>
-        <AppRouter />
-      </Layout.Content>
-    </Layout>
-  );
+    return (
+        <Layout style={{ justifyContent: "center", alignItems: "center" }}>
+            <NavBar />
+            <Layout.Content style={{ width: 700 }}>
+                <AppRouter />
+            </Layout.Content>
+        </Layout>
+    );
 };
 
 export default App;
