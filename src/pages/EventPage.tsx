@@ -15,6 +15,7 @@ const EventPage: FC = () => {
     useEffect(() => {
         fetchGuests();
         if (user) fetchEvents(user.username);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const addNewEvent = (event: IEvent) => {
